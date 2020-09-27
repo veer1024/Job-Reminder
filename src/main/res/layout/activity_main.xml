@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ListView
+        android:id="@+id/tasklist"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginEnd="13dp"
+       android:layout_marginBottom="43dp"
+        android:background="@color/white"
+        android:divider="@color/darkblue"
+        android:dividerHeight="2dp"
+        android:foregroundGravity="center"
+       />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/add"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        app:pressedTranslationZ="12dp"
+        android:layout_marginEnd="15dp"
+        android:onClick="addtime"
+        android:layout_marginBottom="40dp"
+        android:src="@drawable/addbutton"
+        android:backgroundTintMode="src_over"
+        tools:ignore="RelativeOverlap" />
+
+    <RelativeLayout
+android:id="@+id/addtasklayout"
+        android:layout_gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+     android:visibility="invisible"   >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/container"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:padding="20dp">
+
+                <TextView
+                    android:id="@+id/textView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="25dp"
+                    android:text="You Can Add Your Task Reminder here.."
+                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Headline" />
+
+                <LinearLayout
+                    android:id="@+id/linearlayout1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/textView"
+                    android:orientation="horizontal">
+
+                    <EditText
+                        android:id="@+id/tasktodo"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+
+                        android:drawablePadding="10dp"
+                        android:hint="task to do"
+                         />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/linearlayout"
+                    android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                    android:layout_below="@+id/linearlayout1"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/datepicker"
+                        android:layout_width="150dp"
+                        android:layout_height="50dp"
+
+                        android:layout_marginTop="15dp"
+                        android:background="@color/darkblue"
+                        android:onClick="datepick"
+                        android:text="Pick Date"
+                        android:textAllCaps="false"
+                        android:textColor="#cdd8f1" />
+
+                    <Button
+                        android:id="@+id/timeleft"
+                        android:layout_width="150dp"
+                        android:layout_height="50dp"
+
+                        android:layout_marginTop="15dp"
+                        android:background="@color/darkblue"
+                        android:onClick="timepick"
+                        android:text="Pick Time"
+                        android:textAllCaps="false"
+                        android:textColor="#cdd8f1" />
+
+
+                </LinearLayout>
+
+
+
+              <Button
+                    android:id="@+id/register"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/linearlayout"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="15dp"
+                    android:background="@color/darkblue"
+                    android:onClick="register"
+                    android:text="Continue"
+                    android:textAllCaps="false"
+                    android:textColor="#cdd8f1" />
+
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+</RelativeLayout>
