@@ -36,6 +36,7 @@
 android:id="@+id/addtasklayout"
         android:layout_gravity="center"
         android:layout_width="wrap_content"
+        android:background="@color/white"
         android:layout_height="wrap_content"
      android:visibility="invisible"   >
         <LinearLayout
@@ -58,9 +59,8 @@ android:id="@+id/addtasklayout"
                     android:layout_marginTop="25dp"
                     android:text="You Can Add Your Task Reminder here.."
                     android:textAppearance="@style/Base.TextAppearance.AppCompat.Headline" />
-
                 <LinearLayout
-                    android:id="@+id/linearlayout1"
+                    android:id="@+id/linearlayout3"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_below="@+id/textView"
@@ -74,6 +74,23 @@ android:id="@+id/addtasklayout"
 
                         android:drawablePadding="10dp"
                         android:hint="task to do"
+                        />
+                </LinearLayout>
+               <LinearLayout
+                    android:id="@+id/linearlayout1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/linearlayout3"
+                    android:orientation="horizontal">
+
+                    <EditText
+                        android:id="@+id/taskdescription"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+
+                        android:drawablePadding="10dp"
+                        android:hint="task description"
                          />
                 </LinearLayout>
 
@@ -91,8 +108,8 @@ android:id="@+id/addtasklayout"
 
                         android:layout_marginTop="15dp"
                         android:background="@color/darkblue"
-                        android:onClick="datepick"
-                        android:text="Pick Date"
+                        android:onClick="datepicki"
+                        android:text="Pick Starting Date"
                         android:textAllCaps="false"
                         android:textColor="#cdd8f1" />
 
@@ -103,8 +120,41 @@ android:id="@+id/addtasklayout"
 
                         android:layout_marginTop="15dp"
                         android:background="@color/darkblue"
+                        android:onClick="timepicki"
+                        android:text="Pick Starting Time"
+                        android:textAllCaps="false"
+                        android:textColor="#cdd8f1" />
+
+
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/linearlayout2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/linearlayout"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/datepicker2"
+                        android:layout_width="150dp"
+                        android:layout_height="50dp"
+
+                        android:layout_marginTop="15dp"
+                        android:background="@color/darkblue"
+                       android:onClick="datepick"
+                        android:text="Pick Deadline Date"
+                        android:textAllCaps="false"
+                        android:textColor="#cdd8f1" />
+
+                    <Button
+                        android:id="@+id/timeleft2"
+                        android:layout_width="150dp"
+                        android:layout_height="50dp"
+
+                        android:layout_marginTop="15dp"
+                        android:background="@color/darkblue"
                         android:onClick="timepick"
-                        android:text="Pick Time"
+                        android:text="Pick Deadline Time"
                         android:textAllCaps="false"
                         android:textColor="#cdd8f1" />
 
@@ -117,11 +167,11 @@ android:id="@+id/addtasklayout"
                     android:id="@+id/register"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_below="@+id/linearlayout"
+                    android:layout_below="@+id/linearlayout2"
                     android:layout_centerHorizontal="true"
                     android:layout_marginTop="15dp"
                     android:background="@color/darkblue"
-                    android:onClick="register"
+                   android:onClick="register"
                     android:text="Continue"
                     android:textAllCaps="false"
                     android:textColor="#cdd8f1" />
